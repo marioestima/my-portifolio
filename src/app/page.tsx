@@ -1,4 +1,3 @@
-import Description from "../components/layout/Description";
 import About from "../components/layout/About";
 import GetInTouch from "../components/layout/GetInTouch";
 import ContactInfo from "../components/layout/ContactInfo";
@@ -14,8 +13,6 @@ export default function Home() {
         <Header />
 
         <Hero />
-
-        <Description />
 
         <About />
 

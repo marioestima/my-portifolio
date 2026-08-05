@@ -16,11 +16,13 @@ export default function Header({ variant = "dark" }: HeaderProps) {
     >
       <section className="flex justify-between items-start">
         <div>
-          <span className="font-medium text-xs">Mario Estima</span>
+          <span className="font-medium text-xs text-[#FFFFFF]">
+            Mario Estima
+          </span>
         </div>
 
         <div className="max-w-xs text-right">
-          <p className="font-thin text-xs leading-relaxed">
+          <p className="font-thin text-xs  text-[#FFFFFF] leading-relaxed">
             Passionate Creative Designer and Developer, dedicated to crafting
             innovative solutions and exceptional digital experiences through
             modern technologies

@@ -32,7 +32,7 @@ export const MenuBar = () => {
           return (
             <div
               key={item.id}
-              className="relative w-12 h-12 rounded-full overflow-hidden bg-[#87CEEB] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+              className="relative w-12 h-12 rounded-full overflow-hidden bg-[#C6C6C6] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
             >
               <Image
                 src={item.src!}
