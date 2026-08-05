@@ -3,19 +3,19 @@ import Image from "next/image";
 const projects = [
   {
     title: "Learnlogicify Landing Page",
-    image: "/images/learnlogicify.png",
+    image: "/projects/learnlogicify.png",
   },
   {
     title: "Winzee Web Chat application",
-    image: "/images/winzee.png",
+    image: "/projects/winzee.png",
   },
   {
     title: "ChatGPT clone",
-    image: "/images/chatgpt.png",
+    image: "/projects/chatgpt.png",
   },
   {
     title: "Gemini Clone",
-    image: "/images/gemini.png",
+    image: "/projects/gemini.png",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function WorkPreview() {
               key={index}
               className="flex flex-col gap-4 group cursor-pointer"
             >
-              <div className="relative w-full aspect-[807/470] rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800">
+              <div className="relative w-full aspect-[807/470] rounded-3xl overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -67,8 +67,8 @@ export default function WorkPreview() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <button className="px-6 py-2.5 rounded-full border border-neutral-700 bg-neutral-900 text-sm font-medium text-white hover:bg-neutral-800 transition-colors flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-white" />
+          <button className="px-6 py-2.5 rounded-full border border-neutral-700 text-sm font-medium text-black  transition-colors flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-black" />
             Explore more
           </button>
         </div>
