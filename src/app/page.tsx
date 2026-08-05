@@ -5,11 +5,14 @@ import ContactInfo from "../components/layout/ContactInfo";
 import WorkPreview from "../components/layout/WorkPreview";
 import Hero from "../components/layout/Hero";
 import PageLayout from "../components/pages/PageLayout";
+import Header from "../components/layout/Header";
 
 export default function Home() {
   return (
     <PageLayout theme="light">
-      <main>
+      <main className="relative">
+        <Header />
+
         <Hero />
 
         <Description />

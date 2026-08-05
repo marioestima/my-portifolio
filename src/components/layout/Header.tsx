@@ -9,35 +9,24 @@ export default function Header({ variant = "dark" }: HeaderProps) {
   return (
     <header
       className={cn(
-        "w-full py-6",
+        "absolute top-0 left-0 w-full px-8 py-6 z-20",
         variant === "dark" && "text-white",
         variant === "light" && "text-black",
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <Link href="/" className="text-xl font-bold">
-          Mário Estima
-        </Link>
+      <section className="flex justify-between items-start">
+        <div>
+          <span className="font-medium text-xs">Mario Estima</span>
+        </div>
 
-        {/* Navigation */}
-        <nav className="flex items-center gap-8 text-sm">
-          <Link href="/" className="transition-opacity hover:opacity-70">
-            Home
-          </Link>
-
-          <Link href="/skills" className="transition-opacity hover:opacity-70">
-            Skills
-          </Link>
-
-          <Link
-            href="/projects"
-            className="transition-opacity hover:opacity-70"
-          >
-            Projects
-          </Link>
-        </nav>
-      </div>
+        <div className="max-w-xs text-right">
+          <p className="font-thin text-xs leading-relaxed">
+            Passionate Creative Designer and Developer, dedicated to crafting
+            innovative solutions and exceptional digital experiences through
+            modern technologies
+          </p>
+        </div>
+      </section>
     </header>
   );
 }
