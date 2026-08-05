@@ -17,7 +17,7 @@ export default function GetInTouch() {
         </div>
 
         <div className="relative w-full flex items-center justify-end my-10">
-          <div className="w-full h-[1px] bg-neutral-300" />
+          <div className="w-full h-[1px] bg-[#000000]" />
           <Link
             href="mailto:marioestima21@gmail.com"
             className="absolute right-[10%] md:right-[15%] top-1/2 -translate-y-1/2 w-36 h-36 md:w-44 md:h-44 rounded-full bg-[#455CE9] text-white font-thin text-base md:text-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg z-20"
