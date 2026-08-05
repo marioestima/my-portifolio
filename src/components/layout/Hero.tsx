@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MenuBar } from "../menuBar";
+import MenuBar from "../menuBar";
 
 export default function Hero() {
   return (
