@@ -1,54 +1,63 @@
-"use client";
+import Image from "next/image";
+import {
+  Home,
+  SquareTerminal,
+  Box,
+  FileText,
+  ArrowUpRight,
+  GitFork,
+} from "lucide-react";
 
-import { cn } from "@/src/lib/utils";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+const menuOptions = [
+  { id: "home", type: "icon", icon: Home, active: true },
+  { id: "terminal", type: "icon", icon: SquareTerminal, active: false },
+  { id: "box", type: "icon", icon: Box, active: false },
+  {
+    id: "avatar",
+    type: "avatar",
+    src: "/images/menu-avatar.png",
+    alt: "Avatar",
+  },
+  { id: "document", type: "icon", icon: FileText, active: false },
+  { id: "github", type: "icon", icon: GitFork, active: false },
+  { id: "external", type: "icon", icon: ArrowUpRight, active: false },
+];
 
-interface HeaderProps {
-  variant?: "dark" | "light";
-}
-
-export default function Header({ variant = "dark" }: HeaderProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export const MenuBar = () => {
   return (
-    <header
-      className={cn(
-        "absolute top-0 left-0 w-full px-8 py-6 z-20",
-        variant === "dark" && "text-white",
-        variant === "light" && "text-black",
-      )}
-    >
-      <section className="flex justify-between items-start">
-        {/* Nome visível apenas no PC (md:block) */}
-        <div className="hidden md:block">
-          <span className="font-medium text-xs text-[#FFFFFF]">
-            Mario Estima
-          </span>
-        </div>
+    <div className="bg-[#171717] rounded-[18px] p-2 md:p-2.5 inline-flex items-center gap-1.5 md:gap-3 shadow-2xl max-w-full overflow-x-auto">
+      {menuOptions.map((item) => {
+        if (item.type === "avatar") {
+          return (
+            <div
+              key={item.id}
+              className="relative w-9 h-9 md:w-12 md:h-12 rounded-full overflow-hidden bg-[#C6C6C6] flex-shrink-0 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <Image
+                src={item.src!}
+                alt={item.alt!}
+                fill
+                className="object-cover"
+              />
+            </div>
+          );
+        }
 
-        {/* Texto visível apenas no PC (hidden md:block) */}
-        <div className="hidden md:block max-w-xs text-right">
-          <p className="font-thin text-xs text-[#FFFFFF] leading-relaxed">
-            Passionate Creative Designer and Developer, dedicated to crafting
-            innovative solutions and exceptional digital experiences through
-            modern technologies
-          </p>
-        </div>
+        const IconComponent = item.icon!;
 
-        {/* Menu Hambúrguer com formato escada visível apenas no Mobile (md:hidden) */}
-        <div className="md:hidden ml-auto">
+        return (
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex flex-col gap-1.5 p-2 items-end justify-center"
-            aria-label="Toggle Menu"
+            key={item.id}
+            className={`w-9 h-9 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center transition-all ${
+              item.active
+                ? "bg-[#E0E0E0] text-black"
+                : "bg-[#262626] text-white hover:bg-[#333333]"
+            }`}
           >
-            <span className="w-6 h-[2px] bg-white transition-all" />
-            <span className="w-4 h-[2px] bg-white transition-all" />
-            <span className="w-2 h-[2px] bg-white transition-all" />
+            <IconComponent className="w-4 h-4 md:w-5 md:h-5 stroke-[1.75]" />
           </button>
-        </div>
-      </section>
-    </header>
+        );
+      })}
+    </div>
   );
-}
+};
