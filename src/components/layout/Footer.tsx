@@ -25,7 +25,7 @@ export default function Footer({ variant = "dark" }: FooterProps) {
 
         <div className="overflow-hidden">
           <h1 className="text-[14vw] md:text-[13vw] font-thin leading-none tracking-tight select-none -ml-1">
-            Mário
+            Mário Estima
           </h1>
         </div>
       </div>
