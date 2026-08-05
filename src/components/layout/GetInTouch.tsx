@@ -1,12 +1,53 @@
+import Link from "next/link";
+
 export default function GetInTouch() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
-      <h2 className="text-5xl font-bold">Vamos trabalhar juntos?</h2>
+    <section className="w-full bg-white text-black py-24 px-8 md:px-16 lg:px-24">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-16">
+        <div className="flex flex-col gap-2">
+          <span className="font-mono text-sm text-neutral-500">
+            That's all for now.
+          </span>
+          <h2 className="text-[77px] md:text-7xl font-normal tracking-tight leading-none text-black">
+            Got a project in mind?
+          </h2>
+          <h2 className="text-5xl md:text-7xl font-normal tracking-tight leading-none text-black">
+            Let’s talk
+          </h2>
+        </div>
 
-      <p className="mt-6 text-white/70">
-        Tenho interesse em criar novos produtos e colaborar em projetos
-        interessantes.
-      </p>
+        <div className="relative w-full flex items-center justify-end my-10">
+          <div className="w-full h-[1px] bg-neutral-300" />
+          <Link
+            href="mailto:marioestima21@gmail.com"
+            className="absolute right-[10%] md:right-[15%] top-1/2 -translate-y-1/2 w-36 h-36 md:w-44 md:h-44 rounded-full bg-[#455CE9] text-white font-thin text-base md:text-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg z-20"
+          >
+            Get in touch
+          </Link>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-12 md:gap-24 pt-4">
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-neutral-400 font-light">Email:</span>
+            <a
+              href="mailto:marioestima21@gmail.com"
+              className="text-base md:text-[24px] font-thin text-black hover:opacity-70 transition-opacity"
+            >
+              marioestima21@gmail.com
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-neutral-400 font-light">Phone</span>
+            <a
+              href="tel:+918248669086"
+              className="text-base md:text-[24px] font-thin text-black hover:opacity-70 transition-opacity"
+            >
+              (+244) 974863664
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

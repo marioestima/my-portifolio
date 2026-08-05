@@ -19,8 +19,6 @@ export default function Home() {
         <WorkPreview />
 
         <GetInTouch />
-
-        <ContactInfo />
       </main>
     </PageLayout>
   );
