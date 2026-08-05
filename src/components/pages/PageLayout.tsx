@@ -10,7 +10,7 @@ interface PageLayoutProps {
 
 export default function PageLayout({
   children,
-  theme = "dark",
+  theme = "light",
 }: PageLayoutProps) {
   return (
     <PageContainer variant={theme}>

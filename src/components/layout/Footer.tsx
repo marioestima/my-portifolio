@@ -1,4 +1,5 @@
 import { cn } from "@/src/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 
 interface FooterProps {
   variant?: "dark" | "light";
@@ -8,39 +9,24 @@ export default function Footer({ variant = "dark" }: FooterProps) {
   return (
     <footer
       className={cn(
-        "w-full py-12",
-
-        // Página preta
+        "w-full bg-black text-white pt-16 pb-12 px-8 md:px-16 lg:px-24",
         variant === "dark" && "bg-white text-black",
-
-        // Página branca
-        variant === "light" && "bg-black text-white",
       )}
     >
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="text-3xl font-bold">Get in touch</h2>
-
-            <p className="mt-4 opacity-70">Vamos criar algo incrível juntos.</p>
-          </div>
-
-          <div className="space-y-2">
-            <p>
-              Email:
-              <span className="ml-2">mario@email.com</span>
-            </p>
-
-            <p>
-              Telefone:
-              <span className="ml-2">+244 900 000 000</span>
-            </p>
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-12">
+        <div className="flex items-center justify-between">
+          <p className="text-3xl md:text-[90px] font-thin tracking-tight">
+            your friendly chaos creator
+          </p>
+          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition-transform cursor-pointer">
+            <ArrowUpRight className="w-7 h-7 md:w-8 md:h-8" />
           </div>
         </div>
 
-        <div className="mt-12 border-t border-current/20 pt-6 text-sm">
-          © {new Date().getFullYear()} Mário Estima. Todos os direitos
-          reservados.
+        <div className="overflow-hidden">
+          <h1 className="text-[14vw] md:text-[13vw] font-thin leading-none tracking-tight select-none -ml-1">
+            Mário
+          </h1>
         </div>
       </div>
     </footer>
