@@ -4,10 +4,8 @@ import { MenuBar } from "../menuBar";
 export default function Hero() {
   return (
     <section className="relative w-full h-screen bg-[#7E7E7E] text-[#FFFFFF] overflow-hidden flex flex-col justify-between pt-20">
-      {/* Container da Foto + Ícone posicionado no fundo */}
       <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
         <div className="relative flex items-end justify-center max-w-[1400px] w-full h-full">
-          {/* Foto de Perfil com tamanho total mantido, apenas cortada na base do container */}
           <div className="relative w-full h-full flex items-end justify-center overflow-hidden">
             <Image
               src="/images/me.png"
@@ -20,7 +18,6 @@ export default function Hero() {
             />
           </div>
 
-          {/* Ícone Arrow */}
           <div className="pointer-events-auto absolute right-[15%] top-[32%] z-10 flex items-center justify-center">
             <Image
               src="/images/arrow_up.png"
@@ -35,11 +32,10 @@ export default function Hero() {
 
       <div className="flex-1" />
 
-      {/* Título e Menu Inferior com z-index para cobrir a base da imagem */}
       <div className="w-full flex flex-col items-center z-20 pb-4">
         <div className="w-full whitespace-nowrap overflow-hidden flex justify-center px-4">
           <h1 className="text-[7.5vw] md:text-[225px] font-medium leading-none tracking-tight text-[#FFFFFF] select-none text-center">
-            Software Engineer &
+            Software Engineer
           </h1>
         </div>
 
